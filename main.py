@@ -38,7 +38,7 @@ class Images:
         r = re.findall(r"https://4kwallpaper.wiki/(.*).html", url)
         directory = r[0]
         self.create_folder(directory)
-        print(f'Active on {self.directory}')
+        print(f'Active on {directory}')
 
     def download(self, url):
         self.list_broken_link = list()
@@ -60,8 +60,7 @@ class Images:
             [self.download(i) for i in self.list_broken_link]
 
 
-url = ['https://4kwallpaper.wiki/taokaka-wallpapers.html',
-       'https://4kwallpaper.wiki/sharingan-eyes-wallpapers.html', 'https://4kwallpaper.wiki/chibi-wallpapers.html', 'https://4kwallpaper.wiki/stella-glow-wallpapers.html']
-
+url = ['https://4kwallpaper.wiki/luka-megurine-wallpapers.html',
+       'https://4kwallpaper.wiki/japanese-tattoo-wallpapers.html']
 img = Images()
 [img.target_website(i) for i in url]
